@@ -1,32 +1,44 @@
 import { useEffect, useRef } from "react";
 
+let oldScrollTop = 0;
+
 export default function Index() {
   const headerRef = useRef()
 
   useEffect(() => {
-    let oldScrollY = 0
     window.addEventListener('scroll', () => {
-      if (window.scrollY < 400 > 0) {
-        const percentage = Number(getComputedStyle(headerRef.current).getPropertyValue('border-bottom-left-radius').replace('%', ''))
-        
-        if (oldScrollY > window.scrollY) {
-          headerRef.current.style.borderBottomLeftRadius = `${percentage + 0.25}%`
-          headerRef.current.style.borderBottomRightRadius = `${percentage + 0.25}%` 
-        } else {
-          headerRef.current.style.borderBottomLeftRadius = `${percentage - 0.25}%`
-          headerRef.current.style.borderBottomRightRadius = `${percentage - 0.25}%`  
+      const scrollTop = document.documentElement.scrollTop
+
+      if (oldScrollTop < scrollTop) {
+        // Scrolling Down
+        console.log('up')
+
+        if (scrollTop > 100 && scrollTop < 200) {
+          headerRef.current.classList.replace('rounded-b-[40%]', 'rounded-b-[20%]')
+        } else if (scrollTop > 200) {
+          headerRef.current.classList.replace('rounded-b-[20%]', 'rounded-b-0')
         }
-        
+
+      } else if (oldScrollTop > scrollTop) {
+        console.log('down')
+        // Scrolling Up
+        if (scrollTop < 100) {
+          headerRef.current.classList.replace('rounded-b-[20%]', 'rounded-b-[40%]')
+        } else if (scrollTop < 200) {
+          headerRef.current.classList.replace('rounded-b-0', 'rounded-b-[20%]')
+        }
       }
 
-      oldScrollY = window.scrollY
+      oldScrollTop = scrollTop
     })
   }, [])
 
   return (
     <main className="h-[200%]">
-      <header ref={headerRef} className="h-[400px] rounded-b-[30%] bg-blue-400">Header</header>
-      <h1 className="text-4xl">Kendall Wahnschaffe</h1>
+      <header ref={headerRef} className="text-3xl pt-4 md:pt-6 text-white flex justify-center h-96 rounded-b-[40%] bg-blue-400 transition-all">
+        Kendall Wahnschaffe
+      </header>
+      
     </main>
   );
 }

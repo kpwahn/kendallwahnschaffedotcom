@@ -22,6 +22,7 @@ module.exports = {
       12: '48px',
       14: '56px',
       16: '64px',
+      96: '384px'
     },
     extend: {},
   },
