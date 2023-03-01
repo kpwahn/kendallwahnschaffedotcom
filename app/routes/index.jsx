@@ -35,7 +35,7 @@ export default function Index() {
 
   return (
     <main className="h-[200%]">
-      <header ref={headerRef} className="text-3xl pt-4 md:pt-6 text-white flex justify-center h-96 rounded-b-[40%] bg-blue-400 transition-all">
+      <header ref={headerRef} className="text-3xl pt-4 md:pt-6 text-white flex justify-center h-96 rounded-b-[40%] bg-blue-400 transition-all duration-1000">
         Kendall Wahnschaffe
       </header>
       
