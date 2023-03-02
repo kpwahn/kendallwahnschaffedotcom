@@ -12,7 +12,7 @@ export default function Index() {
             alt=""
           />
         </div>
-        <h1 className="absolute bottom-2 right-4 text-5xl text-white">
+        <h1 className="absolute bottom-2 right-0 text-5xl text-white">
           I'm Kendall.
         </h1>
       </div>
