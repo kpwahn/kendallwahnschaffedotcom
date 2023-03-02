@@ -65,9 +65,9 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="px-4 md:px-6 -m-4 md:-mx-6 shadow-lg sticky -top-64 h-80 pt-32 rounded-b-[40%] bg-[#829855] text-5xl text-white transition-all duration-[800ms] md:pt-6 z-10"
+      className="will-change-[padding, font-size] px-4 md:px-6 -m-4 md:-mx-6 shadow-lg sticky -top-64 h-80 pt-32 rounded-b-[40%] bg-[#829855] text-5xl text-white transition-all duration-[800ms] md:pt-6 z-10"
     >
-      <div className="relative text-center w-full transition-[width] duration-1000" ref={textRef}>
+      <div className="will-change-[width] relative text-center w-full transition-[width] duration-1000" ref={textRef}>
         Heeeeeeyo
       </div>
     </header>
