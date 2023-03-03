@@ -2,7 +2,7 @@ import Header from "~/components/header";
 
 export default function Index() {
   return (
-    <main className="h-[200%] bg-[#b9bca9] px-4 md:px-6">
+    <main className="h-[200%] bg-[#b9bca9] px-4">
       <Header />
       <div className="relative">
         <div className="mt-12 overflow-hidden rounded-tl-[40%] rounded-br-[40%] rounded-tr-[20%] rounded-bl-[20%]">
