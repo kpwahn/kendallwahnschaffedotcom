@@ -16,7 +16,7 @@ export const links: LinksFunction = () => [
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Kendall Wahnschaffe",
+  title: "Kendall Wahnschaffe - Christian, dad, web dev, human",
   description: "I'm Kendall. This is my space.",
   viewport: "width=device-width,initial-scale=1",
 });
@@ -28,7 +28,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full">
+      <body className="h-full bg-[#b9bca9]">
         <Outlet />
         <ScrollRestoration />
         <Scripts />

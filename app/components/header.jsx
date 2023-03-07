@@ -53,7 +53,7 @@ export default function Header() {
 
   return (
     <header
-      className="pb-8 flex items-center px-4 md:px-6 shadow-lg h-80 bg-[#829855] text-5xl text-white -mx-4 rounded-br-[75%]"
+      className="pb-8 flex items-center px-4 md:px-6 shadow-lg h-80 bg-[#829855] text-5xl text-white rounded-br-[75%]"
     >
       Hello there.
     </header>
