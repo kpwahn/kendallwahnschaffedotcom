@@ -48,8 +48,7 @@ export default function Index() {
             This is me
           </h2>
           <p className="mt-4 text-xl font-medium text-[#1a1c17]">
-            I'm a christian, dad, web developer, and ocassional pickleball
-            player.
+            I'm a christian, husband, dad, web developer, and pickleball player.
           </p>
         </section>
       </main>
